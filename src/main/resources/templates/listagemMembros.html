@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, AdminWrap lite admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, Wrapkit admin lite design, Wrapkit admin lite dashboard bootstrap 4 dashboard template">
+    <meta name="description"
+        content="Wrapkit Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Portal ICM Local</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/wrapkit-lite/" />
+    <!-- Favicon icon -->
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png"> -->
+    <!-- Custom CSS -->
+    <link href="../wrapkit/css/style.css" rel="stylesheet">
+    <link href="../wrapkit/css/index-landingpage/landing-page.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="">
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Header 1  -->
+        <!-- ============================================================== -->
+        <div class="header1 po-relative">
+            <div class="container">
+                <!-- Header 1 code -->
+                <nav class="navbar navbar-expand-lg h1-nav">
+                    <a class="navbar-brand" th:href="@{/}"><img
+                            src="https://upload.wikimedia.org/wikipedia/pt/5/53/Igreja_Crist%C3%A3_Maranata.png"
+                            width="50%" alt="wrapkit" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header1"
+                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="ti-menu"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="header1">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active"><a class="nav-link" href="#">Página Principal</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Trabalhos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sobre Mim</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="h1-dropdown" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Services <i class="fa fa-angle-down m-l-5"></i>
+                                </a>
+                                <ul class="b-none dropdown-menu animated fadeInUp">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li class="divider" role="separator"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    <li class="divider" role="separator"></li>
+                                    <li><a class="dropdown-item" href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Freebies</a></li>
+                            <li class="nav-item"><a class="btn btn-outline-success" href="#">Hire Me</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- End Header 1 code -->
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Header 1  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Portfolio 1  -->
+        <!-- ============================================================== -->
+        <div class="container mt-3">
+            <div class="row form-group">
+                <div class="col-md-6">
+
+                    <input type="button" value="Filtro" class="btn btn-secondary">
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="border-top">Id</th>
+                                    <th class="border-top">Nome</th>
+                                    <th class="border-top">Grupo</th>
+                                    <th class="border-top">Batizado</th>
+                                    <th class="border-top">Funcao</th>
+                                    <th class="border-top">Idade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="membro: ${membros}">
+                                    <th scope="row" th:text="${membro.id}" />
+                                    <td th:text="${membro.nome}" />
+                                    <td th:text="${membro.grupo}" />
+                                    <td th:text="${membro.batizado}" />
+                                    <td th:text="${membro.funcao}" />
+                                    <td th:text="${membro.idade}" />
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Back to top -->
+        <!-- ============================================================== -->
+        <a class="bt-top btn btn-circle btn-lg btn-info" href="#top"><i class="ti-arrow-up"></i></a>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../wrapkit/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <script type="text/javascript">
+        $('a').on('click', function (event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 90
+            }, 1000);
+            event.preventDefault();
+            // code 
+
+        });
+    </script>
+</body>
+
+</html>

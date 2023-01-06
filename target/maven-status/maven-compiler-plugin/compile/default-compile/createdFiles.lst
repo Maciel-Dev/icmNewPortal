@@ -1,0 +1,16 @@
+com\icm\IcmPortal\models\Igreja.class
+com\icm\IcmPortal\config\SecurityConfig.class
+com\icm\IcmPortal\models\Usuario.class
+com\icm\IcmPortal\repositories\UsuarioDAO.class
+com\icm\IcmPortal\models\Louvor.class
+com\icm\IcmPortal\repositories\IgrejaDAO.class
+com\icm\IcmPortal\controllers\MembroCadastroController.class
+com\icm\IcmPortal\controllers\loginController.class
+com\icm\IcmPortal\repositories\MembroDAO.class
+com\icm\IcmPortal\repositories\LouvorDAO.class
+com\icm\IcmPortal\controllers\IndexController.class
+com\icm\IcmPortal\controllers\ListaLouvorController.class
+com\icm\IcmPortal\config\ThymeleafTemplateConfig.class
+com\icm\IcmPortal\models\Membro.class
+com\icm\IcmPortal\controllers\MembroListagemController.class
+com\icm\IcmPortal\IcmPortalApplication.class
