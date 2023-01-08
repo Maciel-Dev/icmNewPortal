@@ -7,31 +7,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.icm.IcmPortal.models.Usuario;
 import com.icm.IcmPortal.repositories.UsuarioDAO;
 
 
 @Controller
-public class loginController {
+public class RegisterController {
 	
 	//Access
 	@Autowired
 	private UsuarioDAO usuarioQuery;
 
 	//Principal
-	@RequestMapping(value="/login", method = RequestMethod.GET)
+	@RequestMapping(value="/register", method = RequestMethod.GET)
 	public String index() {
-		return "login";
+		return "register";
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String formLogin(@RequestParam String email, @RequestParam String password) {
+	@RequestMapping(value="/register", method=RequestMethod.POST)
+	public String formLogin(@RequestParam String nome, @RequestParam String email, @RequestParam String password) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String pEncoded = passwordEncoder.encode(password);
 		
-		System.out.println(pEncoded);
+		Usuario user = new Usuario();
+		user.setNome(nome);
+		user.setEmail(email);
+		user.setPassword(pEncoded);
 		
-		System.out.println(email);
-		System.out.println(password);
+		usuarioQuery.save(user);
+		
 		return "redirect:/";
 	}
 }
