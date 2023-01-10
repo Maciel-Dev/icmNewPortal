@@ -13,13 +13,6 @@ public class Role {
 
     @Column(name = "name")
     private String name;
-    @ManyToMany(mappedBy = "roles")
-    private Collection<Usuario> usuarios;
-
-    @ManyToMany
-    @JoinTable(
-            name =
-    )
 
     public Long getId() {
         return id;
