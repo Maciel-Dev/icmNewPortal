@@ -23,6 +23,8 @@ public class Usuario {
 	
 	@Column(name = "password")
 	private String password;
+
+
 	
 	
 

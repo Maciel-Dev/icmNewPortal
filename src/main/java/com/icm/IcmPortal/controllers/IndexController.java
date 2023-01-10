@@ -19,6 +19,9 @@ public class IndexController {
 
 	//Principal
 	@GetMapping("/")
+	//Questionar se o usuário possui sessão
+	//Sessão True = Index HTML
+	//Sessão False = Login / Register
 	public String index() {
 		return "redirect:login";
 	}

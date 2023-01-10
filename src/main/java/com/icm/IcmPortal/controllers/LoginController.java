@@ -27,9 +27,14 @@ public class LoginController {
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String formLogin(@RequestParam String email, @RequestParam String password, RedirectAttributes redirAttrs) {
+		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
 		Usuario user = usuarioQuery.findByEmail(email);
+		if(user == null) {
+			redirAttrs.addFlashAttribute("message", "Wrong Email or Password");
+			return "redirect:/login";
+		}
 		String EncodedPassword = user.getPassword();
 		
 		Boolean CheckPassword = passwordEncoder.matches(password, EncodedPassword);
