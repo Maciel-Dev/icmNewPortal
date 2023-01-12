@@ -30,7 +30,7 @@ public class IndexController {
     public String form(Membro membro) {
     	
     	mb.save(membro);
-    	
+
     	return "redirect:/";
     }
 	
