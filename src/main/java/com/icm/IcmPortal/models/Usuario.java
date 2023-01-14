@@ -1,20 +1,22 @@
 package com.icm.IcmPortal.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "Usuario",
+uniqueConstraints = {
+	@UniqueConstraint(columnNames = "nome"),
+	@UniqueConstraint(columnNames = "email")})
+
 public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	
+
 	@Column(name = "nome")
 	private String nome;
 	
@@ -23,10 +25,6 @@ public class Usuario {
 	
 	@Column(name = "password")
 	private String password;
-
-
-	
-	
 
 	public String getEmail() {
 		return email;
@@ -59,5 +57,7 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+
 	
 }

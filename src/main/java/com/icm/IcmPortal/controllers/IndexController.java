@@ -33,5 +33,10 @@ public class IndexController {
 
     	return "redirect:/";
     }
+
+	@GetMapping(value="/index")
+	public String PaginaPrincipal(){
+		return "index";
+	}
 	
 }
