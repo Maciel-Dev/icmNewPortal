@@ -14,7 +14,6 @@ public class Igreja {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	
 
 	@Column(name = "nome")
 	private String nome;
