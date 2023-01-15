@@ -22,6 +22,8 @@ public class LoginController {
 	//Principal
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String index() {
+
+
 		return "login";
 	}
 	
@@ -42,7 +44,7 @@ public class LoginController {
 		
 		if(CheckPassword == true) {
 			redirAttrs.addFlashAttribute("message", "Succesful Login!");
-			return "redirect:/cadastroMembro";
+			return "redirect:/index";
 		}		
 		else {
 			redirAttrs.addFlashAttribute("message", "Your email or Password are incorrect!");

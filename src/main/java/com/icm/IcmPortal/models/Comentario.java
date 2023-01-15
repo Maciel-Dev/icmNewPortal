@@ -16,16 +16,15 @@ public class Comentario {
 
 	@Column(name = "comentarioEBD")
 	private String comentarioEBD;
-
 	@Column(name = "Usuario_ID")
-	private int usuario_id;
+	private int Usuario_ID;
 
-	public int getUsuario_id() {
-		return usuario_id;
+	public int getUsuario_ID() {
+		return Usuario_ID;
 	}
 
-	public void setUsuario_id(int usuario_id) {
-		this.usuario_id = usuario_id;
+	public void setUsuario_ID(int usuario_ID) {
+		Usuario_ID = usuario_ID;
 	}
 
 	public String getComentarioEBD() {

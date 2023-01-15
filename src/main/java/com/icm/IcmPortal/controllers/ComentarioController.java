@@ -22,7 +22,7 @@ public class ComentarioController {
     @GetMapping("/comentario")
     public String index(Model model){
 
-        List<Comentario> lvl = (List<Comentario>) comment.findByUsuarioId(1);
+        List<Comentario> lvl = (List<Comentario>) comment.findAll();
         model.addAttribute("louvores", lvl);
 
         return "comentario";
